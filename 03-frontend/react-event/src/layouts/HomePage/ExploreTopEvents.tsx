@@ -1,6 +1,7 @@
 export const ExploreTopEvents = () => {
     return (
         <div className='p-5 mb-4 bg-dark header'>
+           {/* m - for classes that set margin, p - for classes that set padding  */}
             <div className='container-fluid py-5 text-white 
                 d-flex justify-content-center align-items-center'>
                 <div>
