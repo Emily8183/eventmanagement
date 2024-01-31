@@ -2,7 +2,7 @@ export const Navbar = () => {
     return (
         <nav className='navbar navbar-expand-lg navbar-dark main-color py-3'>
             <div className='container-fluid'>
-                <span className='navbar-brand'>Luv 2 Read</span>
+                <span className='navbar-brand'>Event Management</span>
                 <button className='navbar-toggler' type='button'
                     data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown'
                     aria-controls='navbarNavDropdown' aria-expanded='false'
@@ -16,7 +16,7 @@ export const Navbar = () => {
                             <a className='nav-link' href='#'> Home</a>
                         </li>
                         <li className='nav-item'>
-                            <a className='nav-link' href='#'> Search Books</a>
+                            <a className='nav-link' href='#'> Search Events</a>
                         </li>
 
                     </ul>
