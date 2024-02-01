@@ -1,18 +1,17 @@
-import React from 'react';
+import { Homepage } from './layouts/HomePage/Homepage'
+import { Navbar } from './layouts/NavBarAndFooter/Navbar';
+import { Footer } from './layouts/NavBarAndFooter/Footer';
 import './App.css';
-import {Navbar} from './layouts/NavBarAndFooter/Navbar';
-import { ExploreTopEvents } from './layouts/HomePage/ExploreTopEvents';
-import { Carousel } from './layouts/HomePage/Carousel';
 
-function App() {
+export const App = () => {
   return (
     <div>
-      <Navbar />
-      <ExploreTopEvents />    
-      <Carousel />
-    </div>
+    <Navbar />
+    <Homepage />
+    <Footer />
     //must have the div tag for App.tsx
+    </div>
   );
 }
 
-export default App;
+// after updating the app function by using the arrow function, dont forget to update index.tsx
