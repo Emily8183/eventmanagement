@@ -3,7 +3,7 @@ import { Navbar } from './layouts/NavBarAndFooter/Navbar';
 import { Footer } from './layouts/NavBarAndFooter/Footer';
 import './App.css';
 
-function App() {
+export const App = () => {
   return (
     <div>
     <Navbar />
@@ -13,5 +13,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
