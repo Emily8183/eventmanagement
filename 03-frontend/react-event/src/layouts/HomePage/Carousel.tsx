@@ -13,40 +13,46 @@ export const Carousel = () => {
                 <div className='carousel-inner'>
                     <div className='carousel-item active'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            <img src={require('./../../Images/EventsImages/event1.jpg')}
-                                width='151'
-                                height='233'
-                                alt="event"
-                            />
-                            <h6 className='mt-2'>Some kind of Event</h6>
-                            <p>Events</p>
-                            <a className='btn main-color text-white' href='8'>Reserve</a>
+                            <div className='col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3'>
+                                <img src={require('./../../Images/EventsImages/event1.jpg')}
+                                    width='151'
+                                    height='233'
+                                    alt="event"
+                                />
+                                <h6 className='mt-2'>Some kind of Event</h6>
+                                <p>Events</p>
+                                <a className='btn main-color text-white' href='8'>Reserve</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className='carousel-item active'>
+                    <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            <img src={require('./../../Images/EventsImages/event2.jpg')}
-                                width='151'
-                                height='233'
-                                alt="event"
-                            />
-                            <h6 className='mt-2'>Some kind of Event</h6>
-                            <p>Events</p>
-                            <a className='btn main-color text-white' href='8'>Reserve</a>
+                            <div className='col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3'>
+                                <img src={require('./../../Images/EventsImages/event2.jpg')}
+                                    width='151'
+                                    height='233'
+                                    alt="event"
+                                />
+                                <h6 className='mt-2'>Some kind of Event</h6>
+                                <p>Events</p>
+                                <a className='btn main-color text-white' href='8'>Reserve</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className='carousel-item active'>
+                    <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            <img src={require('./../../Images/EventsImages/event3.jpg')}
-                                width='151'
-                                height='233'
-                                alt="event"
-                            />
-                            <h6 className='mt-2'>Some kind of Event</h6>
-                            <p>Events</p>
-                            <a className='btn main-color text-white' href='8'>Reserve</a>
+                            <div className='col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3'>
+                                <img src={require('./../../Images/EventsImages/event3.jpg')}
+                                    width='151'
+                                    height='233'
+                                    alt="event"
+                                />
+                                <h6 className='mt-2'>Some kind of Event</h6>
+                                <p>Events</p>
+                                <a className='btn main-color text-white' href='8'>Reserve</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,8 +68,6 @@ export const Carousel = () => {
                     <span className='carousel-control-next-icon' aria-hidden='true'></span>
                     <span className='visually-hidden'>Next</span>
                 </button>
-
-
             </div>
 
             {/* Mobile */}
