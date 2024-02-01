@@ -13,3 +13,5 @@ export const App = () => {
     </div>
   );
 }
+
+// after updating the app function by using the arrow function, dont forget to update index.tsx
