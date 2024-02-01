@@ -4,6 +4,7 @@ import { Navbar } from './layouts/NavBarAndFooter/Navbar';
 import { ExploreTopEvents } from './layouts/HomePage/ExploreTopEvents';
 import { Carousel } from './layouts/HomePage/Carousel';
 import { Heros } from './layouts/HomePage/Heros';
+import { EventServices } from './layouts/HomePage/EventService';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <ExploreTopEvents />    
       <Carousel />
       <Heros />
-
+      <EventServices />
     </div>
     //must have the div tag for App.tsx
   );
