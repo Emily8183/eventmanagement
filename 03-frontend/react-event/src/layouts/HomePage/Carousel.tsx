@@ -16,36 +16,24 @@ export const Carousel = () => {
                     <div className='carousel-item active'>
                         <div className='row d-flex justify-content-center align-items-center'>
                          <ReturnEvent />   
+                         <ReturnEvent />
+                         <ReturnEvent />
                         </div>
                     </div>
 
                     <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            <div className='col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3'>
-                                <img src={require('./../../Images/EventsImages/event2.jpg')}
-                                    width='151'
-                                    height='233'
-                                    alt="event"
-                                />
-                                <h6 className='mt-2'>Some kind of Event</h6>
-                                <p>Events</p>
-                                <a className='btn main-color text-white' href='8'>Reserve</a>
-                            </div>
+                        <ReturnEvent />
+                        <ReturnEvent />
+                        <ReturnEvent />
                         </div>
                     </div>
 
                     <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                            <div className='col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3'>
-                                <img src={require('./../../Images/EventsImages/event3.jpg')}
-                                    width='151'
-                                    height='233'
-                                    alt="event"
-                                />
-                                <h6 className='mt-2'>Some kind of Event</h6>
-                                <p>Events</p>
-                                <a className='btn main-color text-white' href='8'>Reserve</a>
-                            </div>
+                        <ReturnEvent />
+                        <ReturnEvent />
+                        <ReturnEvent />
                         </div>
                     </div>
                 </div>
@@ -67,16 +55,7 @@ export const Carousel = () => {
             <div className='d-lg-none mt-3'>
                 <div className='row d-flex justify-content-center align-items-center'>
                     {/* <ReturnBook book={books[7]} key={books[7].id}/> */}
-                    <div className="text-center">
-                        <img src={require('./../../Images/EventsImages/event1.jpg')}
-                            width='151'
-                            height='233'
-                            alt="event"
-                        />
-                        <h6 className='mt-2'></h6>
-                        <b>Event</b>
-                        <a className='btn main-color text-white' href='8'>Reserve</a>
-                    </div>
+                    <ReturnEvent />
                 </div>
             </div>
             <div className='homepage-carousel-title mt-3'>

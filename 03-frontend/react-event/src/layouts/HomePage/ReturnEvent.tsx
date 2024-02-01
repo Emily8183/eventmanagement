@@ -10,7 +10,7 @@ export const ReturnEvent = () => {
                 height='233'
                 alt="event"
             />
-            <h6 className='mt-2'>Some kind of Event</h6>
+            <h6 className='mt-2'>Event</h6>
             <p>Events</p>
             <a className='btn main-color text-white' href='8'>Reserve</a>
         </div>
