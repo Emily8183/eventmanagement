@@ -18,11 +18,15 @@ public class Event {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "seats")
-    private int seats;
+    @Column(name = "tickets")
+    private int tickets;
 
+    @Column(name = "tickets_available")
+    private int ticketsAvailable;
 
+    @Column(name = "category")
+    private String category;
 
-
-
+    @Column(name = "img")
+    private String img;
 }
