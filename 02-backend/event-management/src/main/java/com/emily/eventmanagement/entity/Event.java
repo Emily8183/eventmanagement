@@ -12,6 +12,17 @@ public class Event {
     @Column(name = "title")
     private String title;
 
+    @Column(name = "speaker")
+    private String speaker;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "seats")
+    private int seats;
+
+
+
 
 
 }
