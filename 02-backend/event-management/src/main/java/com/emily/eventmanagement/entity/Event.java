@@ -9,6 +9,9 @@ public class Event {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "title")
+    private String title;
+
 
 
 }
