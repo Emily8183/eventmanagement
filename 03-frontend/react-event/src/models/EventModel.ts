@@ -18,4 +18,7 @@ class EventModel {
         this.seatsAvailable = seatsAvailable;
         this.category = category;
         this.img = img;
+    }
 }
+
+export default EventModel;
