@@ -9,6 +9,7 @@ export const Carousel = () => {
 
     const [events, setEvents] = useState<EventModel[]>([]);
     const [isLoading,setIsLoading] = useState(true);
+    const [httpError, setHttpError] = useState(null);
 
     useEffect(() => {
         //fetch data from api
