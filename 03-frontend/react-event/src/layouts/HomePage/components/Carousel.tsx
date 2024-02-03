@@ -45,6 +45,8 @@ export const Carousel = () => {
 
         //apply the useEffect to "setEvents"
         setEvents(loadedEvents);
+        //after loading, change the loading status to false;
+        setIsLoading(false);
 
 
         }
