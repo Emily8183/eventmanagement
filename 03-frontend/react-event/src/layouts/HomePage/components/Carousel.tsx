@@ -25,10 +25,15 @@ export const Carousel = () => {
         const responseJson = await response.json();
         const responseData = responseJson._embedded.events;
 
+        // save the fetched data to a new variable
+        const loadedBooks: EventModel[] = [];
+
+        
+
 
         }
 
-        // save the fetched data to a new variable
+       
 
         // run a loop to push the data to show the events
     })
