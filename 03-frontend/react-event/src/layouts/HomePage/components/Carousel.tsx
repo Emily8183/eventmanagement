@@ -39,9 +39,11 @@ export const Carousel = () => {
                     ticketsAvailable: responseData[key].ticketsAvailable,
                     category: responseData[key].category,
                     img: responseData[key].img,
-                }
-            )
+                });
         }
+
+        //apply the useEffect to "setEvents"
+        setEvents(loadedEvents);
 
 
         }
