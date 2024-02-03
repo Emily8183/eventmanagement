@@ -49,13 +49,14 @@ export const Carousel = () => {
         //after loading, change the loading status to false;
         setIsLoading(false);
 
+    };
 
-        }
-
-       
-
+    fetchEvents().catch((error:any) => {
+        setIsLoading(false);
+        setHttpError(error.message);
+    })    
         
-    })
+    },[]);
 
     return (
         <div className='container mt-5' style={{ height: 550 }}>
