@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState, useEffect} from 'react';
 // this is for dynamic page
 
 export const ReturnEvent = () => {
