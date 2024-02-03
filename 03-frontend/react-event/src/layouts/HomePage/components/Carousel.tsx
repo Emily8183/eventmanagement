@@ -1,6 +1,32 @@
+import EventModel from "../../../models/EventModel";
 import { ReturnEvent } from "./ReturnEvent";
+import { useEffect, useState } from "react";
+
+
+
 
 export const Carousel = () => {
+
+    const [events, setEvents] = useState<EventModel[]>([]);
+
+    useEffect(() => {
+        //fetch data from api
+        const fetchEvents = async () => {
+            const baseUrl: string = "http://localhost:8080/api/books";
+            const url: string = "${baseUrl}?page=0&size=9";
+            const response= await fetch(url);
+
+        //if else statement to see if needs to throw an error
+        
+
+
+        }
+
+        // save the fetched data to a new variable
+
+        // run a loop to push the data to show the events
+    })
+
     return (
         <div className='container mt-5' style={{ height: 550 }}>
 
