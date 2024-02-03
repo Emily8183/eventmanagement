@@ -21,6 +21,10 @@ export const Carousel = () => {
                 throw new Error('Somthing went wrong!');
             }
 
+        //save data to responseData
+        const responseJson = await response.json();
+        const responseData = responseJson._embedded.events;
+
 
         }
 
