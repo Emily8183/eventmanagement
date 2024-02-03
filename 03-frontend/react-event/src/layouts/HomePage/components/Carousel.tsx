@@ -17,7 +17,9 @@ export const Carousel = () => {
             const response= await fetch(url);
 
         //if else statement to see if needs to throw an error
-        
+            if(!response) {
+                throw new Error('Somthing went wrong!');
+            }
 
 
         }
