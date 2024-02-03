@@ -3,19 +3,19 @@ class EventModel {
     title: string;
     speaker?: string;
     description?: string;
-    seats?: number;
-    seatsAvailable?: number;
+    tickets?: number;
+    ticketsAvailable?: number;
     category?: string;
     img?: string;
     //the question mark means the value can be null
 
-    constructor(id: number, title: string, speaker: string, description: string, seats: number, seatsAvailable: number, category: string, img: string) {
+    constructor(id: number, title: string, speaker: string, description: string, tickets: number, ticketsAvailable: number, category: string, img: string) {
         this.id = id;
         this.title = title;
         this.speaker = speaker;
         this.description = description;
-        this.seats = seats;
-        this.seatsAvailable = seatsAvailable;
+        this.tickets = tickets;
+        this.ticketsAvailable = ticketsAvailable;
         this.category = category;
         this.img = img;
     }

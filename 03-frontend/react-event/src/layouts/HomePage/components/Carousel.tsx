@@ -25,17 +25,30 @@ export const Carousel = () => {
         const responseJson = await response.json();
         const responseData = responseJson._embedded.events;
 
-        // save the fetched data to a new variable
-        const loadedBooks: EventModel[] = [];
+        // set up a new variable, then run a loop to push the data from the api(responseData) to the variable
+        const loadedEvents: EventModel[] = [];
 
-        
+        for (const key in responseData) {
+            loadedEvents.push(
+                {
+                    id: responseData[key].id,
+                    title: responseData[key].title,
+                    speaker: responseData[key].speaker,
+                    description: responseData[key].description,
+                    tickets: responseData[key].tickets,
+                    ticketsAvailable: responseData[key].ticketsAvailable,
+                    category: responseData[key].category,
+                    img: responseData[key].img,
+                }
+            )
+        }
 
 
         }
 
        
 
-        // run a loop to push the data to show the events
+        
     })
 
     return (
