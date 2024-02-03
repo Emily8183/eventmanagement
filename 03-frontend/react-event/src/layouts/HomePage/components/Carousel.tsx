@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 export const Carousel = () => {
 
     const [events, setEvents] = useState<EventModel[]>([]);
+    const [isLoading,setIsLoading] = useState(true);
 
     useEffect(() => {
         //fetch data from api
