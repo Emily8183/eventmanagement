@@ -15,8 +15,7 @@ export const ReturnEvent: React.FC<{book:EventModel}> = (props) => {
                 alt="event"
             /> : 
             <img
-                className='img-fluid'
-                img src={require('../../.././Images/EventsImages/event1.jpg')}
+                src={require('../../.././Images/EventsImages/event1.jpg')}
                 width='151'
                 height='233'
                 alt="event"
