@@ -9,7 +9,6 @@ export const App = () => {
     <Navbar />
     <Homepage />
     <Footer />
-    //must have the div tag for App.tsx
     </div>
   );
 }

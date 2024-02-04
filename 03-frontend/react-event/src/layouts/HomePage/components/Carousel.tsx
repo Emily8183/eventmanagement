@@ -1,9 +1,7 @@
 import EventModel from "../../../models/EventModel";
 import { ReturnEvent } from "./ReturnEvent";
 import { useEffect, useState } from "react";
-
-
-
+import { SpinnerLoading } from "../../Utils/SpinnerLoading";
 
 export const Carousel = () => {
 
@@ -14,8 +12,8 @@ export const Carousel = () => {
     useEffect(() => {
         //fetch data from api
         const fetchEvents = async () => {
-            const baseUrl: string = "http://localhost:8080/api/books";
-            const url: string = "${baseUrl}?page=0&size=9";
+            const baseUrl: string = "http://localhost:8080/api/events";
+            const url: string = `${baseUrl}?page=0&size=9`;
             const response= await fetch(url);
 
         //if else statement to see if needs to throw an error
@@ -44,7 +42,7 @@ export const Carousel = () => {
                 });
         }
 
-        //apply the useEffect to "setEvents"
+        // apply the useEffect to "setEvents"
         setEvents(loadedEvents);
         //after loading, change the loading status to false;
         setIsLoading(false);
@@ -58,13 +56,26 @@ export const Carousel = () => {
         
     },[]);
 
+    if (isLoading) {
+        return (
+            <SpinnerLoading />
+        )
+    }
+
+    if (httpError) {
+        return (
+            <div className='container m-5'>
+                <p>{httpError}</p>
+            </div>
+        )
+    }
+
     return (
         <div className='container mt-5' style={{ height: 550 }}>
 
             <div className='homepage-carousel-title'>
                 <h3>Find your next fav event.</h3>
             </div>
-
             <div id='carouselExampleControls' className='carousel carousel-dark slide mt-5 
             d-none d-lg-block' data-bs-interval='false'>
 
@@ -90,7 +101,7 @@ export const Carousel = () => {
 
                     <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                        {events.slice(7,9).map(event => (
+                        {events.slice(6,9).map(event => (
                             <ReturnEvent event={event} key = {event.id} />
                         ))} 
                         </div>
@@ -116,6 +127,7 @@ export const Carousel = () => {
                     <ReturnEvent event={events[7]} key={events[7].id}/>
                 </div>
             </div>
+
             <div className='homepage-carousel-title mt-3'>
                 <a className='btn btn-outline-secondary btn-lg' href='#'>View More</a>
                 {/* The href='#' means that when the "View More" link is clicked, it will not navigate to a different page or URL. Instead, it will stay on the same page or reload the current page. */}

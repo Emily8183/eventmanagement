@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import EventModel from '../../../models/EventModel';
+import React from 'react'
 // this is for dynamic page
 
 export const ReturnEvent: React.FC<{event:EventModel}> = (props) => {
@@ -26,5 +27,5 @@ export const ReturnEvent: React.FC<{event:EventModel}> = (props) => {
             <a className='btn main-color text-white' href='8'>Reserve</a>
         </div>
     </div>
-    )
+    );
 }
