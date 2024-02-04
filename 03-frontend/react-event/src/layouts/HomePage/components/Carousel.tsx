@@ -14,9 +14,10 @@ export const Carousel = () => {
         const fetchEvents = async () => {
             const baseUrl: string = "http://localhost:8080/api/events";
             const url: string = `${baseUrl}?page=0&size=9`;
+            // NOTE: must use back tick ` instead of ""
             const response= await fetch(url);
 
-        //if else statement to see if needs to throw an error
+            //if else statement to see if needs to throw an error
             if(!response) {
                 throw new Error('Somthing went wrong!');
             }
