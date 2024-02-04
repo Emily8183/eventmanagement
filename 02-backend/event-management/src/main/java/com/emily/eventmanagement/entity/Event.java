@@ -2,6 +2,10 @@ package com.emily.eventmanagement.entity;
 
 import lombok.Data;
 import jakarta.persistence.*;
+
+@Entity
+@Table(name = "event")
+@Data
 public class Event {
 
     @Id
