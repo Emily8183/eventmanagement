@@ -72,25 +72,27 @@ export const Carousel = () => {
                 <div className='carousel-inner'>
                     <div className='carousel-item active'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                         <ReturnEvent />   
-                         <ReturnEvent />
-                         <ReturnEvent />
+                         {/* loop through the ReturnEvent  */}
+                          {events.slice(0,3).map(event => (
+                            <ReturnEvent event={event} key = {event.id} />
+                            // passed event object as a prop
+                          ))}
                         </div>
                     </div>
 
                     <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                        <ReturnEvent />
-                        <ReturnEvent />
-                        <ReturnEvent />
+                        {events.slice(3,6).map(event => (
+                            <ReturnEvent event={event} key = {event.id} />
+                        ))} 
                         </div>
                     </div>
 
                     <div className='carousel-item'>
                         <div className='row d-flex justify-content-center align-items-center'>
-                        <ReturnEvent />
-                        <ReturnEvent />
-                        <ReturnEvent />
+                        {events.slice(7,9).map(event => (
+                            <ReturnEvent event={event} key = {event.id} />
+                        ))} 
                         </div>
                     </div>
                 </div>
@@ -111,8 +113,7 @@ export const Carousel = () => {
             {/* Mobile */}
             <div className='d-lg-none mt-3'>
                 <div className='row d-flex justify-content-center align-items-center'>
-                    {/* <ReturnBook book={books[7]} key={books[7].id}/> */}
-                    <ReturnEvent />
+                    <ReturnEvent event={events[7]} key={events[7].id}/>
                 </div>
             </div>
             <div className='homepage-carousel-title mt-3'>
