@@ -1,3 +1,4 @@
+import React from 'react';
 import { Homepage } from './layouts/HomePage/Homepage'
 import { Navbar } from './layouts/NavBarAndFooter/Navbar';
 import { Footer } from './layouts/NavBarAndFooter/Footer';

@@ -2,6 +2,7 @@ import EventModel from "../../../models/EventModel";
 import { ReturnEvent } from "./ReturnEvent";
 import { useEffect, useState } from "react";
 import { SpinnerLoading } from "../../Utils/SpinnerLoading";
+import { Link } from "react-router-dom";
 
 export const Carousel = () => {
 
@@ -130,7 +131,7 @@ export const Carousel = () => {
             </div>
 
             <div className='homepage-carousel-title mt-3'>
-                <a className='btn btn-outline-secondary btn-lg' href='#'>View More</a>
+                <Link className='btn btn-outline-secondary btn-lg' to='/search'>View More</Link>
                 {/* The href='#' means that when the "View More" link is clicked, it will not navigate to a different page or URL. Instead, it will stay on the same page or reload the current page. */}
             </div>
         </div>
