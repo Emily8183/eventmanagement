@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const ExploreTopEvents = () => {
     return (
         <div className='p-5 mb-4 bg-dark header'>
@@ -7,8 +9,8 @@ export const ExploreTopEvents = () => {
                 <div>
                     <h1 className='display-5 fw-bold'>Find your next event</h1>
                     <p className='col-md-8 fs-4'>What interests you the most?</p>
-                    <a type='button' className='btn main-color btn-lg text-white' href='#'>
-                        Explore top events</a>
+                    <Link type='button' className='btn main-color btn-lg text-white' to='/search'>
+                        Explore top events</Link>
                 </div>
             </div>
         </div>
