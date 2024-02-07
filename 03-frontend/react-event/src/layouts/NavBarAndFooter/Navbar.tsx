@@ -19,7 +19,7 @@ export const Navbar = () => {
                             {/* use NavLink instead of link for the NavBar */}
                         </li>
                         <li className='nav-item'>
-                            <NavLink className='nav-link' to='/serach'> Search Events</NavLink>
+                            <NavLink className='nav-link' to='/search'> Search Events</NavLink>
                         </li>
 
                     </ul>

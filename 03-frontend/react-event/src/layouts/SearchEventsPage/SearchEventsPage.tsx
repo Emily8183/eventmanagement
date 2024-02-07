@@ -3,7 +3,7 @@ import EventModel from "../../models/EventModel";
 import { SpinnerLoading } from "../Utils/SpinnerLoading";
 import { SearchEvent } from "./Components/SearchEvent";
 
-export const searchEventsPage = () => {
+export const SearchEventsPage = () => {
 
     // this page is temporarily only listing all the events
 

@@ -4,6 +4,7 @@ import { Navbar } from './layouts/NavBarAndFooter/Navbar';
 import { Footer } from './layouts/NavBarAndFooter/Footer';
 import {Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import './App.css';
+import { SearchEventsPage } from './layouts/SearchEventsPage/SearchEventsPage';
 
 export const App = () => {
   return (
@@ -20,6 +21,10 @@ export const App = () => {
 
         <Route path='/home'>
           <Homepage />
+        </Route>
+
+        <Route path='/search'>
+          <SearchEventsPage />
         </Route>
 
         </Switch>
