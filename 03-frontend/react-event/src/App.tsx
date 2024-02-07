@@ -7,9 +7,10 @@ import './App.css';
 
 export const App = () => {
   return (
-    <div>
+    <div className='d-flex flex-column min-vh-100'>
+      {/* to keep the footer stay on bottom of each page */}
     <Navbar />
-      <div>
+      <div className='flex-grow-1'>
         <Switch>
         {/* <Switch> wraps the <Route> components. */}
 

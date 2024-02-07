@@ -16,6 +16,7 @@ export const Navbar = () => {
                     <ul className='navbar-nav'>
                         <li className='nav-item'>
                             <NavLink className='nav-link' to='/home'> Home</NavLink>
+                            {/* use NavLink instead of link for the NavBar */}
                         </li>
                         <li className='nav-item'>
                             <NavLink className='nav-link' to='/serach'> Search Events</NavLink>
