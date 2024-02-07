@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import EventModel from "../../models/EventModel";
 import { SpinnerLoading } from "../Utils/SpinnerLoading";
+import { SearchEvent } from "./Components/SearchEvent";
 
 export const searchEventsPage = () => {
 
@@ -73,7 +74,13 @@ export const searchEventsPage = () => {
         )
     }
 
- 
+ return (
+    <div className='mt-3'>
+        {events.map(event => (
+            <SearchEvent key={event.id} event={event} /> 
+        ))}
+    </div>
+ )
 
 
 }
