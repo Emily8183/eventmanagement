@@ -7,16 +7,17 @@ const [isLoading,setIsLoading] = useState(true);
 const [httpError, setHttpError] = useState(null);
 
 const eventId = (window.location.pathname).split('/')[2];
+// localhost:3000/checkout/eventId
 
 useEffect(() => {
     //fetch data from api
     const fetchEvent = async () => {
-        const baseUrl: string = 'http://localhost:8080/api/events/${eventId}';
+        const baseUrl: string = `http://localhost:8080/api/events/${eventId}`;
         // NOTE: must use back tick ` instead of ""
         const response= await fetch(baseUrl);
 
         //if else statement to see if needs to throw an error
-        if(!response) {
+        if(!response.ok) {
             throw new Error('Somthing went wrong!');
         }
 
@@ -37,13 +38,40 @@ useEffect(() => {
 
         setEvent(loadedEvent);
         setIsLoading(false);
+    };
 
         fetchEvent().catch((error:any) => {
             setIsLoading(false);
             setHttpError(error.message);
         })
-        }
-    });
+        
+    },[]);
+
+
+    return (
+            <div className='container d-none d-lg-block'>
+                <div className='row mt-5'>
+                    <div className='col-sm-2 col-md-2'>
+                        {event?.img ?
+                            <img src={event?.img} width='226' height='349' alt='Event' />
+                            :
+                            <img src={require('../.././Images/EventsImages/event1.jpg')} width='226'
+                                height='349' alt='Event' />
+                        }
+                    </div>
+                    <div className='col-4 col-md-4 container'>
+                        <div className='ml-2'>
+                            <h2>{event?.title}</h2>
+                            <h5 className='text-primary'>{event?.speaker}</h5>
+                            <p className='lead'>{event?.description}</p>
+                            {/* <StarsReview rating={totalStars} size={32} /> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    );
 
 
 }

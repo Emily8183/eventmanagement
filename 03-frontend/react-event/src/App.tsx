@@ -29,7 +29,8 @@ export const App = () => {
         </Route>
 
         <Route path='/checkout/:eventId'>
-          <EventCheckoutPage/ >
+          {/* : 表示路由参数的占位符，用于捕获 URL 中的动态部分。当你使用 : 后跟一个字符串时，这个字符串就会被作为路由参数的名称，并且匹配到的 URL 中对应位置的部分会被作为参数的值传递给组件。 */}
+          <EventCheckoutPage />
         </Route>
 
         </Switch>
