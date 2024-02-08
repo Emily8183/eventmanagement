@@ -5,6 +5,7 @@ import { Footer } from './layouts/NavBarAndFooter/Footer';
 import {Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import './App.css';
 import { SearchEventsPage } from './layouts/SearchEventsPage/SearchEventsPage';
+import { EventCheckoutPage } from './layouts/EventCheckoutPage/EventCheckoutPage';
 
 export const App = () => {
   return (
@@ -25,6 +26,10 @@ export const App = () => {
 
         <Route path='/search'>
           <SearchEventsPage />
+        </Route>
+
+        <Route path='/checkout/:eventId'>
+          <EventCheckoutPage/ >
         </Route>
 
         </Switch>
