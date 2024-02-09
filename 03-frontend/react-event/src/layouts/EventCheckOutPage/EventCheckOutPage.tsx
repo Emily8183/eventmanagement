@@ -13,7 +13,7 @@ useEffect(() => {
     //fetch data from api
     const fetchEvent = async () => {
         const baseUrl: string = `http://localhost:8080/api/events/${eventId}`;
-        // NOTE: must use back tick ` instead of ""
+        // NOTE: must use backtick ` instead of ""
         const response= await fetch(baseUrl);
 
         //if else statement to see if needs to throw an error
