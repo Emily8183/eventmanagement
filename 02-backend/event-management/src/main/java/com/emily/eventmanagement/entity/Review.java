@@ -18,6 +18,10 @@ public class Review {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "user_email")
+    @CreationTimestamp
+    private Date date;
+
 
 
 
