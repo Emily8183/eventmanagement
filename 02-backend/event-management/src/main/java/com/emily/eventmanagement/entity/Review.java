@@ -22,12 +22,10 @@ public class Review {
     @CreationTimestamp
     private Date date;
 
-    @Column(name="event_id")
+    @Column(name = "event_id")
     private Long eventId;
 
-
-
-
-
+    @Column(name = "review_description")
+    private String reviewDescription;
 
 }
