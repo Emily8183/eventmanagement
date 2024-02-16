@@ -52,6 +52,12 @@ export const EventCheckoutPage = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const fetchBookReviews = async () => {
+      const reviewUrl: string = `http://localhost:8080/api/reviews/findByBookId?bookId=${eventId}`;
+    };
+  });
+
   return (
     <div className="container d-none d-lg-block">
       <div className="row mt-5">
