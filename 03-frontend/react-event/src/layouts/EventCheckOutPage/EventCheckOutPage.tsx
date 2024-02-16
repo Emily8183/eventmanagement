@@ -57,6 +57,12 @@ export const EventCheckoutPage = () => {
       const reviewUrl: string = `http://localhost:8080/api/reviews/findByBookId?bookId=${eventId}`;
 
       const responseReviews = await fetch(reviewUrl);
+
+      if(!responseReviews.ok) {
+        throw new Error("Somthing went wrong!");
+      }
+      
+      }
     };
   });
 
