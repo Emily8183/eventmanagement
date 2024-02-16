@@ -61,7 +61,9 @@ export const EventCheckoutPage = () => {
       if(!responseReviews.ok) {
         throw new Error("Somthing went wrong!");
       }
-      
+
+      const responseJsonReviews = await responseReviews.json();
+
       }
     };
   });
