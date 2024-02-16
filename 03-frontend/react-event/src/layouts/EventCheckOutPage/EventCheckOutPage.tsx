@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import EventModel from "../../models/EventModel";
 import { StarsReview } from "../Utils/StarsReview";
 import ReviewModel from "../../models/ReviewModel";
+import { SpinnerLoading } from "../Utils/SpinnerLoading";
 
 export const EventCheckoutPage = () => {
   const [event, setEvent] = useState<EventModel>();
   const [isLoading, setIsLoading] = useState(true);
+
   const [httpError, setHttpError] = useState(null);
 
   const [reviews, setReviews] = useState<ReviewModel[]>([]);
@@ -53,7 +55,7 @@ export const EventCheckoutPage = () => {
   }, []);
 
   useEffect(() => {
-    const fetchBookReviews = async () => {
+    const fetchEventReviews = async () => {
       const reviewUrl: string = `http://localhost:8080/api/reviews/findByBookId?bookId=${eventId}`;
 
       const responseReviews = await fetch(reviewUrl);
@@ -98,8 +100,15 @@ export const EventCheckoutPage = () => {
       setIsLoadingReview(false);
     };
 
-    fetchEventReviews(). 
-  });
+    fetchEventReviews().catch((error: any) => {
+      setIsLoadingReview(false);
+      setHttpError(error.message);
+    });
+  }, []);
+
+  if (isLoading || isLoadingReview) {
+    return <SpinnerLoading />;
+  }
 
   return (
     <div className="container d-none d-lg-block">
@@ -128,10 +137,3 @@ export const EventCheckoutPage = () => {
     </div>
   );
 };
-
-fetchEventReviews().catch((error:any) => {
-  
-})
-  
-}
-
