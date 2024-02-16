@@ -31,6 +31,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         // using the primary key for functionality on the front end so we know exactly what event we're going to be using.
 
         disableHttpMethods(Event.class, config, theUnsupportedActions);
+        disableHttpMethods(Review.class, config, theUnsupportedActions);
 
 
         /* Configure CORS Mapping */
