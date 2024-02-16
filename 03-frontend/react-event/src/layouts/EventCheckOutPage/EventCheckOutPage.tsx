@@ -58,7 +58,7 @@ export const EventCheckoutPage = () => {
 
       const responseReviews = await fetch(reviewUrl);
 
-      if(!responseReviews.ok) {
+      if (!responseReviews.ok) {
         throw new Error("Somthing went wrong!");
       }
 
@@ -73,16 +73,26 @@ export const EventCheckoutPage = () => {
       let weightedStarReviews: number = 0;
 
       for (const key in responseData) {
-        loadedReviews.push {
-          id: responseData[key].id;
-          userEmail: responseData[key].userEmail;
-          date: responseData[key].date;
-          rating: responseData[key].rating;
-          reviewDescription: responseData[key].reviewDescription;
-        }
+        loadedReviews.push({
+          id: responseData[key].id,
+          userEmail: responseData[key].userEmail,
+          date: responseData[key].date,
+          rating: responseData[key].rating,
+          event_id: responseData[key].eventId,
+          reviewDescription: responseData[key].reviewDescription,
+        });
+        weightedStarReviews += responseData[key].rating;
       }
+
+      if (loadedReviews) {
+        const round = (
+          (Math.round(weightedStarReviews / loadedReviews.length) * 2) /
+          2
+        ).toFixed(1);
+        setTotalStars(Number(round));
+        //Number() function is a built-in function that converts a string to a number
       }
-    
+    };
   });
 
   return (
