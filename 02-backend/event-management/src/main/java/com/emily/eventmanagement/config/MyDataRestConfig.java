@@ -3,6 +3,7 @@
 package com.emily.eventmanagement.config;
 
 import com.emily.eventmanagement.entity.Event;
+import com.emily.eventmanagement.entity.Review;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -26,9 +27,11 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         //to disable the unsupported actions
 
         config.exposeIdsFor(Event.class);
+        config.exposeIdsFor(Review.class);
         // using the primary key for functionality on the front end so we know exactly what event we're going to be using.
 
         disableHttpMethods(Event.class, config, theUnsupportedActions);
+
 
         /* Configure CORS Mapping */
         cors.addMapping(config.getBasePath() + "/**")
