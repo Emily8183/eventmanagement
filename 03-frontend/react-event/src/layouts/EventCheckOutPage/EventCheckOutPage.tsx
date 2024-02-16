@@ -64,6 +64,9 @@ export const EventCheckoutPage = () => {
 
       const responseJsonReviews = await responseReviews.json();
 
+      const responseData = responseJsonReviews._embedded.review;
+      // the extracted array of review objects is stored in the responseData variable
+
       }
     };
   });
