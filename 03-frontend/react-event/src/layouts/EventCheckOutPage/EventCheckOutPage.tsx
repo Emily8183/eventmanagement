@@ -67,6 +67,9 @@ export const EventCheckoutPage = () => {
       const responseData = responseJsonReviews._embedded.review;
       // the extracted array of review objects is stored in the responseData variable
 
+      const loadedReviews: ReviewModel[] = [];
+      //set up loadedReviews of type ReviewModel array equals to an empty array
+
       }
     };
   });
