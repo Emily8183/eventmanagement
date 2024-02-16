@@ -9,7 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.util.Date;
 
 @Entity
-@Table(name="review")
+@Table(name = "review")
 @Data
 public class Review {
 
@@ -18,7 +18,7 @@ public class Review {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "user_email")
+    @Column(name = "date")
     @CreationTimestamp
     private Date date;
 
