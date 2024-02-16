@@ -55,6 +55,8 @@ export const EventCheckoutPage = () => {
   useEffect(() => {
     const fetchBookReviews = async () => {
       const reviewUrl: string = `http://localhost:8080/api/reviews/findByBookId?bookId=${eventId}`;
+
+      const responseReviews = await fetch(reviewUrl);
     };
   });
 
