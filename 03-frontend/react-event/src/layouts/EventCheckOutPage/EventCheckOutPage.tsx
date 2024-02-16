@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import EventModel from "../../models/EventModel";
 import { StarsReview } from "../Utils/StarsReview";
+import ReviewModel from "../../models/ReviewModel";
 
 export const EventCheckoutPage = () => {
   const [event, setEvent] = useState<EventModel>();
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState(null);
+
+  const [reviews, setReviews] = useState<ReviewModel[]>([]);
+  const [totalStars, setTotalStars] = useState(0);
+  const [isLoadingReview, setIsLoadingReview] = useState(true);
 
   const eventId = window.location.pathname.split("/")[2];
   // localhost:3000/checkout/eventId
