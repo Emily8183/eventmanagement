@@ -93,7 +93,12 @@ export const EventCheckoutPage = () => {
         setTotalStars(Number(round));
         //Number() function is a built-in function that converts a string to a number
       }
+
+      setReviews(loadedReviews);
+      setIsLoadingReview(false);
     };
+
+    fetchEventReviews(). 
   });
 
   return (
@@ -123,3 +128,10 @@ export const EventCheckoutPage = () => {
     </div>
   );
 };
+
+fetchEventReviews().catch((error:any) => {
+  
+})
+  
+}
+
