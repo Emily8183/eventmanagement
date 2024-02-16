@@ -89,6 +89,7 @@ export const EventCheckoutPage = () => {
           (Math.round(weightedStarReviews / loadedReviews.length) * 2) /
           2
         ).toFixed(1);
+
         setTotalStars(Number(round));
         //Number() function is a built-in function that converts a string to a number
       }
