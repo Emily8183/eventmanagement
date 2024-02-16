@@ -70,8 +70,19 @@ export const EventCheckoutPage = () => {
       const loadedReviews: ReviewModel[] = [];
       //set up loadedReviews of type ReviewModel array equals to an empty array
 
+      let weightedStarReviews: number = 0;
+
+      for (const key in responseData) {
+        loadedReviews.push {
+          id: responseData[key].id;
+          userEmail: responseData[key].userEmail;
+          date: responseData[key].date;
+          rating: responseData[key].rating;
+          reviewDescription: responseData[key].reviewDescription;
+        }
       }
-    };
+      }
+    
   });
 
   return (
