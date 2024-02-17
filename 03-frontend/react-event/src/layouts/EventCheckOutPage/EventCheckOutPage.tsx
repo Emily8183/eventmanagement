@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
 import EventModel from "../../models/EventModel";
 import { StarsReview } from "../Utils/StarsReview";
+import ReviewModel from "../../models/ReviewModel";
+import { SpinnerLoading } from "../Utils/SpinnerLoading";
 
 export const EventCheckoutPage = () => {
   const [event, setEvent] = useState<EventModel>();
   const [isLoading, setIsLoading] = useState(true);
+
   const [httpError, setHttpError] = useState(null);
+
+  const [reviews, setReviews] = useState<ReviewModel[]>([]);
+  const [totalStars, setTotalStars] = useState(0);
+  const [isLoadingReview, setIsLoadingReview] = useState(true);
 
   const eventId = window.location.pathname.split("/")[2];
   // localhost:3000/checkout/eventId
@@ -46,6 +53,62 @@ export const EventCheckoutPage = () => {
       setHttpError(error.message);
     });
   }, []);
+
+  useEffect(() => {
+    const fetchEventReviews = async () => {
+      const reviewUrl: string = `http://localhost:8080/api/reviews/findByBookId?bookId=${eventId}`;
+
+      const responseReviews = await fetch(reviewUrl);
+
+      if (!responseReviews.ok) {
+        throw new Error("Somthing went wrong!");
+      }
+
+      const responseJsonReviews = await responseReviews.json();
+
+      const responseData = responseJsonReviews._embedded.review;
+      // the extracted array of review objects is stored in the responseData variable
+
+      const loadedReviews: ReviewModel[] = [];
+      //set up loadedReviews of type ReviewModel array equals to an empty array
+
+      let weightedStarReviews: number = 0;
+
+      for (const key in responseData) {
+        loadedReviews.push({
+          id: responseData[key].id,
+          userEmail: responseData[key].userEmail,
+          date: responseData[key].date,
+          rating: responseData[key].rating,
+          event_id: responseData[key].eventId,
+          reviewDescription: responseData[key].reviewDescription,
+        });
+        weightedStarReviews += responseData[key].rating;
+      }
+
+      if (loadedReviews) {
+        const round = (
+          (Math.round(weightedStarReviews / loadedReviews.length) * 2) /
+          2
+        ).toFixed(1);
+
+        setTotalStars(Number(round));
+        //Number() function is a built-in function that converts a string to a number
+      }
+
+      setReviews(loadedReviews);
+      setIsLoadingReview(false);
+    };
+
+    fetchEventReviews().catch((error: any) => {
+      setIsLoadingReview(false);
+      setHttpError(error.message);
+    });
+  }, []);
+
+  if (isLoading || isLoadingReview) {
+    return <SpinnerLoading />;
+  }
 
   return (
     <div className="container d-none d-lg-block">
