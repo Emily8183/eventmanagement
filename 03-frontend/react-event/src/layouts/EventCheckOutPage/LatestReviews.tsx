@@ -10,6 +10,8 @@ export const LatestReviews: React.FC<{
       <div className={props.mobile ? "" : "col-sm-2 col-md-2"}>
         <h2>Latest Reviews: </h2>
       </div>
+
+      <div className="col-sm-10 col-md-10"></div>
     </div>
   );
 };
