@@ -25,6 +25,8 @@ public class Review {
     @CreationTimestamp
     private Date date;
 
+    @Column(name = "rating")
+    private double rating;
     @Column(name = "event_id")
     private Long eventId;
 
