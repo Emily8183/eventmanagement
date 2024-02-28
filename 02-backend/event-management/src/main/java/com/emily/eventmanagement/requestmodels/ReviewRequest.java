@@ -12,4 +12,8 @@ public class ReviewRequest {
 
     private Optional<String> reviewDescription;
 
+    public Long getEventId() {
+        return this.eventId;
+    }
+
 }

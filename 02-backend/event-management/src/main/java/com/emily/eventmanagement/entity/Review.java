@@ -18,6 +18,9 @@ public class Review {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "user_email")
+    private String userEmail;
+
     @Column(name = "date")
     @CreationTimestamp
     private Date date;
