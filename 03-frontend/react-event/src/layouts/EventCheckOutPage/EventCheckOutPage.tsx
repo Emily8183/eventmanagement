@@ -3,6 +3,7 @@ import EventModel from "../../models/EventModel";
 import { StarsReview } from "../Utils/StarsReview";
 import ReviewModel from "../../models/ReviewModel";
 import { SpinnerLoading } from "../Utils/SpinnerLoading";
+import { LatestReviews } from "./LatestReviews";
 
 export const EventCheckoutPage = () => {
   const [event, setEvent] = useState<EventModel>();
@@ -133,6 +134,9 @@ export const EventCheckoutPage = () => {
           </div>
         </div>
       </div>
+      <LatestReviews reviews={reviews} eventId={event?.id} mobile={false} />
     </div>
+
+    //TODO: add mobile display here
   );
 };
