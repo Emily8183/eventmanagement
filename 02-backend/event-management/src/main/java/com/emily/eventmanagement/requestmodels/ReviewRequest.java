@@ -6,4 +6,8 @@ import lombok.Data;
 public class ReviewRequest {
     private double rating;
 
+    private Long eventId;
+
+
+
 }
