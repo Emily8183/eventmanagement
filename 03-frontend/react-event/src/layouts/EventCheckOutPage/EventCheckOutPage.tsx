@@ -88,8 +88,7 @@ export const EventCheckoutPage = () => {
 
       if (loadedReviews) {
         const round = (
-          (Math.round(weightedStarReviews / loadedReviews.length) * 2) /
-          2
+          Math.round((weightedStarReviews / loadedReviews.length) * 2) / 2
         ).toFixed(1);
 
         setTotalStars(Number(round));
