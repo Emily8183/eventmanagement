@@ -43,4 +43,17 @@ public class ReviewService {
 
         }
 
+        //to display the review list
+        public Boolean userReviewListed(String userEmail, Long bookId) {
+
+            Review validateReview = reviewRepository.findByUserEmailAndEventId(userEmail, bookId);
+            if (validateReview != null) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+
 }
