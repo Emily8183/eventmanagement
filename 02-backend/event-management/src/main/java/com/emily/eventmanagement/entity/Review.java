@@ -3,6 +3,7 @@ package com.emily.eventmanagement.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import javax.persistence.*;
+
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
