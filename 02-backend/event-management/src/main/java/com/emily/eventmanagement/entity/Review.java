@@ -3,6 +3,7 @@ package com.emily.eventmanagement.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import javax.persistence.*;
+
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -18,10 +19,15 @@ public class Review {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "user_email")
+    private String userEmail;
+
     @Column(name = "date")
     @CreationTimestamp
     private Date date;
 
+    @Column(name = "rating")
+    private double rating;
     @Column(name = "event_id")
     private Long eventId;
 

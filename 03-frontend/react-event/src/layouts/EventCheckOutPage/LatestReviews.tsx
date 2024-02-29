@@ -4,7 +4,7 @@ import { Review } from "../Utils/Review";
 
 export const LatestReviews: React.FC<{
   reviews: ReviewModel[];
-  bookId: number | undefined;
+  eventId: number | undefined;
   mobile: boolean;
 }> = (props) => {
   return (
@@ -24,7 +24,7 @@ export const LatestReviews: React.FC<{
               <Link
                 type="button"
                 className="btn main-color btn-md text-white"
-                to={`/reviewlist/${props.bookId}`}
+                to={`/reviewlist/${props.eventId}`}
               >
                 Reach all reviews.
               </Link>
