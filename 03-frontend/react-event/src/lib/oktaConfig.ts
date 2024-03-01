@@ -7,4 +7,6 @@ export const oktaConfig = {
   scopes: ["openid", "email", "profile"],
   pkce: true,
   //PKCE is a security feature that helps to ensure that the authorization code that is sent back to your application is secure.
+  disableHttpsCheck: true,
+  //disable HTTPS check for development purposes only
 };
