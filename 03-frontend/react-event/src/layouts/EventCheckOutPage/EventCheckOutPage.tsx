@@ -130,7 +130,7 @@ export const EventCheckoutPage = () => {
             <h2>{event?.title}</h2>
             <h5 className="text-primary">{event?.speaker}</h5>
             <p className="lead">{event?.description}</p>
-            <StarsReview rating={1.5} size={32} />
+            <StarsReview rating={totalStars} size={32} />
           </div>
         </div>
       </div>
