@@ -12,6 +12,9 @@ export const App = () => {
     history.push("/login");
   };
 
+  const history = useHistory();
+  //允许在函数组件中访问路由的历史记录
+
   return (
     <div className="d-flex flex-column min-vh-100">
       {/* to keep the footer stay on bottom of each page */}
