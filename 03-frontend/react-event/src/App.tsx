@@ -8,6 +8,7 @@ import { SearchEventsPage } from "./layouts/SearchEventsPage/SearchEventsPage";
 import { EventCheckoutPage } from "./layouts/EventCheckoutPage/EventCheckoutPage";
 import { oktaConfig } from "./lib/oktaConfig";
 import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
+import { Security, LoginCallback, SecureRoute } from "@okta/okta-react";
 
 export const App = () => {
   const customAuthHandler = () => {
