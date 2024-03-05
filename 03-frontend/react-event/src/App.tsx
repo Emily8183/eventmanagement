@@ -6,6 +6,8 @@ import { Redirect, Route, Switch, useHistory } from "react-router-dom";
 import "./App.css";
 import { SearchEventsPage } from "./layouts/SearchEventsPage/SearchEventsPage";
 import { EventCheckoutPage } from "./layouts/EventCheckoutPage/EventCheckoutPage";
+import { oktaConfig } from "./lib/oktaConfig";
+import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
 
 export const App = () => {
   const customAuthHandler = () => {
@@ -14,6 +16,10 @@ export const App = () => {
 
   const history = useHistory();
   //允许在函数组件中访问路由的历史记录
+
+  const restoreOriginalUri = async (_oktaAuth: any, originalUri: any) => {
+    history.replace(toRelativeUrl(originalUri || "/", window.location.origin));
+  };
 
   return (
     <div className="d-flex flex-column min-vh-100">
