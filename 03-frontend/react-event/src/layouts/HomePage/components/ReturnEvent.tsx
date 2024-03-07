@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import EventModel from "../../../models/EventModel";
 import React from "react";
+import { Link } from "react-router-dom";
 // this is for dynamic page
 
 export const ReturnEvent: React.FC<{ event: EventModel }> = (props) => {
@@ -20,9 +21,12 @@ export const ReturnEvent: React.FC<{ event: EventModel }> = (props) => {
         )}
         <h6 className="mt-2">{props.event.title}</h6>
         <p>{props.event.speaker}</p>
-        <a className="btn main-color text-white" href="8">
+        <Link
+          className="btn main-color text-white"
+          to={`checkout/${props.event.id}`}
+        >
           Reserve
-        </a>
+        </Link>
       </div>
     </div>
   );
