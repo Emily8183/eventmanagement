@@ -27,9 +27,9 @@ export const Heros = () => {
                   Explore top books{" "}
                 </Link>
               ) : (
-                <a className="btn main-color btn-lg text-white" href="#">
+                <Link className="btn main-color btn-lg text-white" to="/login">
                   Sign up
-                </a>
+                </Link>
               )}
             </div>
           </div>
