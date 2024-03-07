@@ -1,4 +1,5 @@
 import { useOktaAuth } from "@okta/okta-react";
+import { Link } from "react-router-dom";
 
 export const Heros = () => {
   const { authState } = useOktaAuth();
@@ -16,9 +17,20 @@ export const Heros = () => {
                 The Preplingo team would love to know what you have been
                 enjoying. we will be able to organize more fun events for you!
               </p>
-              <a className="btn main-color btn-lg text-white" href="#">
-                Sign up
-              </a>
+
+              {authState?.isAuthenticated ? (
+                <Link
+                  type="button"
+                  className="btn main-color btn-lg text-white"
+                  to="search"
+                >
+                  Explore top books{" "}
+                </Link>
+              ) : (
+                <a className="btn main-color btn-lg text-white" href="#">
+                  Sign up
+                </a>
+              )}
             </div>
           </div>
         </div>
