@@ -14,8 +14,8 @@ export const Heros = () => {
             <div className="ml-2">
               <h1>What events have you been enjoying?</h1>
               <p className="lead">
-                The Preplingo team would love to know what you have been
-                enjoying. we will be able to organize more fun events for you!
+                We would love to know what you have been enjoying. we will be
+                able to organize more fun events for you!
               </p>
 
               {authState?.isAuthenticated ? (
@@ -24,7 +24,7 @@ export const Heros = () => {
                   className="btn main-color btn-lg text-white"
                   to="search"
                 >
-                  Explore top books{" "}
+                  Explore top events{" "}
                 </Link>
               ) : (
                 <Link className="btn main-color btn-lg text-white" to="/login">
@@ -60,8 +60,8 @@ export const Heros = () => {
             <div className="mt-2">
               <h1>What have you been enjoying?</h1>
               <p className="lead">
-                The Preplingo team would love to know what you have been
-                enjoying. we will be able to organize more fun events for you!
+                We would love to know what you have been enjoying. We will be
+                able to organize more fun events for you!!
               </p>
               {authState?.isAuthenticated ? (
                 <Link
@@ -69,7 +69,7 @@ export const Heros = () => {
                   className="btn main-color btn-lg text-white"
                   to="search"
                 >
-                  Explore top books
+                  Explore top events
                 </Link>
               ) : (
                 <Link className="btn main-color btn-lg text-white" to="/login">
